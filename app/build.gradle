@@ -1,6 +1,11 @@
 apply plugin: 'com.android.application'
+
 apply plugin: 'kotlin-android'
+
 apply plugin: 'kotlin-android-extensions'
+
+apply plugin: "kotlin-kapt"
+
 
 android {
     compileSdkVersion 29
@@ -27,11 +32,67 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //application
+    def multidex__version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex__version"
+
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin__version"
+    implementation "androidx.core:core-ktx:$libraries.core_ktx__verison"
+
+    //corutines
+    def corutines__version = '1.1.1'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$corutines__version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$corutines__version"
+
+    //ui
+    def material_design_components__version = '1.1.0-alpha07'
+    implementation "androidx.appcompat:appcompat:$libraries.ui__version"
+    implementation "androidx.constraintlayout:constraintlayout:$libraries.constraint_layout__version"
+    implementation "com.google.android.material:material:$material_design_components__version"
+
+    //navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$libraries.nav__version"
+    implementation "androidx.navigation:navigation-ui-ktx:$libraries.nav__version"
+    implementation "androidx.navigation:navigation-ui-ktx:$libraries.nav__version"
+
+    //networking
+    def http_client__version = "1.1.1"
+    def okhttp_stack__version = '3.14.2'
+    implementation "com.android.volley:volley:$http_client__version"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_stack__version"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$okhttp_stack__version"
+
+    //database
+    implementation "androidx.room:room-runtime:$libraries.room__version"
+    kapt "androidx.room:room-compiler:$libraries.room__version"
+    implementation "androidx.room:room-ktx:$libraries.room__version"
+    testImplementation "androidx.room:room-testing:$libraries.room__version"
+
+    //json, xml
+    def json_parser__version = "2.8.5"
+    implementation "com.google.code.gson:gson:$json_parser__version"
+
+    //life cycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$libraries.lifecycle__version"
+    testImplementation "androidx.arch.core:core-testing:$libraries.lifecycle_testing__version"
+
+    //datetime
+    def joda__version = "2.10.2"
+    implementation "joda-time:joda-time:$joda__version"
+
+    //images
+    def glide__version = "4.9.0"
+    implementation "com.github.bumptech.glide:glide:$glide__version"
+    //implementation "com.github.bumptech.glide:okhttp3-integration:$glide__version"
+    implementation "com.github.bumptech.glide:volley-integration:$glide__version"
+    kapt "com.github.bumptech.glide:compiler:$glide__version"
+
+    //testing
+    testImplementation "junit:junit:$libraries.junit__version"
+    androidTestImplementation "androidx.test:runner:$libraries.test_runner__version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$libraries.espresso_core__version"
+
+    implementation project(path: ':base')
 }

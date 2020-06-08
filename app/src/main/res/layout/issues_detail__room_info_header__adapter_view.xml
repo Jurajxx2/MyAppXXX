@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/roomIconIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/stated" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/roomTitleTV"
+        style="@style/montserrat_bold__30__black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/rightIV"
+        app:layout_constraintStart_toEndOf="@+id/leftIV"
+        app:layout_constraintTop_toBottomOf="@+id/roomIconIV"
+        tools:text="Izba č. 102" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/roomSubtitleTV"
+        style="@style/montserrat__16__black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomTitleTV"
+        tools:text="VIP hosť, nový príchod" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/leftIV"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0.3"
+        android:padding="12dp"
+        android:src="@drawable/chev_left"
+        app:layout_constraintBottom_toBottomOf="@+id/roomTitleTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/roomTitleTV" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rightIV"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="0.3"
+        android:padding="12dp"
+        android:src="@drawable/chev_right"
+        app:layout_constraintBottom_toBottomOf="@+id/roomTitleTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/roomTitleTV" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/roomStateIconOverlayIV"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/roomIconIV"
+        app:layout_constraintEnd_toEndOf="@+id/roomIconIV"
+        app:srcCompat="@drawable/done"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

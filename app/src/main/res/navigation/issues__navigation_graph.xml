@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/pin__navigation_graph"
+	app:startDestination="@id/issuesListFragment">
+	<fragment
+		android:id="@+id/issuesListFragment"
+		android:name="com.touch4it.myapp.screens.issues.fragments.issuesList.IssuesListFragment"
+		android:label="IssuesListFragment"
+		tools:layout="@layout/issues_list__issues_list_fragment">
+		<action
+			android:id="@+id/startIssuesDetailFragment"
+			app:destination="@id/issueDetailViewPagerFragment">
+			<argument
+				android:name="selectedIssueId"
+				app:argType="string" />
+			<argument
+				android:name="issues"
+				app:argType="string[]" />
+		</action>
+		<action
+			android:id="@+id/showArchivedIssues"
+			app:destination="@id/issuesListFragment">
+			<argument
+				android:name="isArchive"
+				android:defaultValue="true"
+				app:argType="boolean" />
+		</action>
+		<argument
+			android:name="isArchive"
+			android:defaultValue="false"
+			app:argType="boolean" />
+	</fragment>
+	<fragment
+		android:id="@+id/issueDetailViewPagerFragment"
+		android:name="com.touch4it.myapp.screens.issues.fragments.issuesDetailsViewPager.IssuesDetailViewPagerFragment"
+		android:label="IssuesDetailViewPagerFragment"
+		tools:layout="@layout/issues_detail__issues_detail_fragment" >
+		<action
+			android:id="@+id/startWriteStateBottomSheetDialogFragment"
+			app:destination="@id/writeStateBottomSheetDialogFragment">
+			<argument
+				android:name="checklist"
+                app:argType="com.touch4it.myapp.data.entities.issue.models.checkList.CheckList"
+				/>
+		</action>
+		<action
+			android:id="@+id/startSuccessDialogFragment"
+			app:destination="@id/successDialogFragment" >
+            <argument
+                android:name="additionalInfo"
+                app:argType="string" />
+			<argument
+				android:name="isIssueSuccess"
+				app:argType="boolean"
+				android:defaultValue="true" />
+		</action>
+		<action
+			android:id="@+id/startSimpleSelectionBottomSheetDialogFragment"
+			app:destination="@id/simpleSelectionBottomSheetDialogFragment"
+			app:popUpTo="@+id/issueDetailViewPagerFragment">
+			<argument
+				android:name="options"
+				app:argType="string[]" />
+			<argument
+				android:name="selectedOption"
+				app:argType="string" />
+			<argument
+				android:name="isIssueSuccess"
+				app:argType="boolean"
+				android:defaultValue="true" />
+		</action>
+		<action
+			android:id="@+id/startIssuesListFragment"
+			app:destination="@id/issuesListFragment" />
+		<action
+			android:id="@+id/startGalleryViewPagerFragment"
+			app:destination="@id/galleryViewPagerFragment">
+			<argument
+				android:name="urlOrUriList"
+				app:argType="string[]" />
+			<argument
+				android:name="position"
+				app:argType="integer" />
+		</action>
+		<argument
+			android:name="selectedIssueId"
+			app:argType="string" />
+		<argument
+			android:name="issues"
+			app:argType="string[]" />
+	</fragment>
+	<dialog
+		android:id="@+id/writeStateBottomSheetDialogFragment"
+		android:name="com.touch4it.myapp.screens.issues.fragments.writeStateBottomSheetDialog.WriteStateBottomSheetDialogFragment"
+		android:label="WriteStateBottomSheetDialogFragment"
+		tools:layout="@layout/issues__write_state_bottom_sheet_dialog_fragment">
+		<action
+			android:id="@+id/startGoodsRefillInfoDialogFragment"
+			app:destination="@id/goodsRefillInfoDialogFragment"
+			app:popUpTo="@+id/issueDetailViewPagerFragment">
+			<argument
+				android:name="refillInfo"
+				app:argType="com.touch4it.myapp.screens.issues.fragments.goodsRefillInfoDialog.adapters.ChecklistChange" />
+		</action>
+		<argument
+			android:name="checklist"
+            app:argType="com.touch4it.myapp.data.entities.issue.models.checkList.CheckList"
+			/>
+	</dialog>
+	<dialog
+		android:id="@+id/successDialogFragment"
+		android:name="com.touch4it.myapp.screens.common.successDialog.SuccessDialogFragment"
+		android:label="SuccessDialogFragment"
+		tools:layout="@layout/issues__success_dialog_fragment">
+		<argument
+			android:name="isIssueSuccess"
+			app:argType="boolean"
+			android:defaultValue="true" />
+	</dialog>
+	<dialog
+		android:id="@+id/simpleSelectionBottomSheetDialogFragment"
+		android:name="com.touch4it.myapp.screens.common.simpleSelectionBottomSheetDialog.SimpleSelectionBottomSheetDialogFragment"
+		android:label="SimpleSelectionBottomSheetDialogFragment"
+		tools:layout="@layout/issues__simple_selection_bottom_sheet_dialog_fragment">
+		<argument
+			android:name="options"
+			app:argType="string[]" />
+		<argument
+			android:name="selectedOption"
+			app:argType="string" />
+		<argument
+			android:name="isIssueSuccess"
+			app:argType="boolean"
+			android:defaultValue="true" />
+	</dialog>
+	<dialog
+		android:id="@+id/goodsRefillInfoDialogFragment"
+		android:name="com.touch4it.myapp.screens.issues.fragments.goodsRefillInfoDialog.GoodsRefillInfoDialogFragment"
+		android:label="GoodsRefillInfoDialogFragment"
+		tools:layout="@layout/issues__goods_refill_info_dialog_fragment">
+		<argument
+			android:name="refillInfo"
+			app:argType="com.touch4it.myapp.screens.issues.fragments.goodsRefillInfoDialog.adapters.ChecklistChange"
+			/>
+	</dialog>
+	<fragment
+		android:id="@+id/galleryViewPagerFragment"
+		android:name="com.touch4it.myapp.screens.common.galleryViewPager.GalleryViewPagerFragment"
+		android:label="GalleryViewPagerFragment"
+		tools:layout="@layout/issues__gallery_view_pager__fragment">
+		<argument
+			android:name="urlOrUriList"
+			app:argType="string[]" />
+		<argument
+			android:name="position"
+			app:argType="integer" />
+		<argument
+			android:name="isDeletable"
+			app:argType="boolean"
+			android:defaultValue="false"/>
+	</fragment>
+</navigation>

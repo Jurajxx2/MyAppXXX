@@ -1,0 +1,116 @@
+<resources>
+
+    <string name="app_name">MyApp housekeeping</string>
+
+    <!-- PIN -->
+    <string name="pin__pin_fragment__pin_code">PIN kód</string>
+    <string name="pin__pin_fragment__pin_failed">Chyba prihlásenia</string>
+    <string name="pin__pin_fragment__pin_error">Nesprávny PIN kód</string>
+
+    <string name="pin__sync_fragment__pin_ok">Zadaný PIN kód bol správny.\nNačítavam obsah.</string>
+    <string name="pin__sync_fragment__sync_error">Synchronizácia bola neúpešná (chyba komunikácie)</string>
+
+    <!-- SETTINGS -->
+
+    <string name="settings_fragment__settings">Nastavenia</string>
+    <string name="settings_fragment__connection_type">Typ pripojenia</string>
+    <string name="settings_fragment__connection_type__ip">IP</string>
+    <string name="settings_fragment__connection_type__url">URL</string>
+    <string name="settings_fragment__ip_address">IP adresa</string>
+    <string name="settings_fragment__url_address">URL adresa</string>
+    <string name="settings_fragment__port">Port</string>
+    <string name="settings_fragment__apply_changes">Aplikovať zmeny</string>
+    <string name="settings_fragment__cancel">Zrušiť</string>
+    <string name="settings_fragment__wrong_format">Nesprávny formát</string>
+
+    <!-- ROOM STATES -->
+
+    <string name="room_states__new">Izba prevzatá</string>
+    <string name="room_states__new_handyman">Úloha prevzatá</string>
+    <string name="room_states__done">Izba uprataná</string>
+    <string name="room_states__done_handyman">Úloha vyriešená</string>
+    <string name="room_states__in_progress">Izba čiastočne uprataná</string>
+    <string name="room_states__rejected">Izbu nerušiť</string>
+    <string name="room_states__issue_new">Úloha prevzatá</string>
+    <string name="room_states__issue_done">Úloha vyriešená</string>
+
+    <!-- ISSUES LIST -->
+
+    <string name="issues_list__issues_list_activity__logout_title">Odhlásnie</string>
+    <string name="issues_list__issues_list_activity__logout_message">Ste si istý, že sa chcete odhlásiť?</string>
+    <string name="issues_list__issues_list_activity__logout_positive_button">Áno</string>
+    <string name="issues_list__issues_list_activity__logout_negative_button">Nie</string>
+
+    <string name="issues__remove_photo">Odstrániť fotografiu?</string>
+    <string name="issues__yes">Áno</string>
+    <string name="issues__no">Nie</string>
+    <string name="issues__refill_goods">Doplňte tovar:</string>
+    <string name="issues__ok_done">OK, hotovo</string>
+    <string name="issues__show_next_issue">Zobraziť ďalšiu úlohu</string>
+    <string name="issues__back_to_list_of_issues">Späť na zoznam úloh</string>
+    <string name="issues__write_down_state">Zapíšte stav</string>
+    <string name="issues__write_actual_numbers_of_items">Uveďte aktuálne, nájdené množstvo každej položky</string>
+    <string name="issues__confirm_count">Potvrdiť počty</string>
+
+    <string name="issues_list__issues_list_fragment__today_agenda">Agenda na dnes</string>
+    <string name="issues_list__issues_list_fragment__finished_issues_title">Dokončené úlohy</string>
+    <string name="issues_list__issues_list_fragment__finished_issues_subtitle">Archív dokončených úloh</string>
+
+    <string name="issues_list__issues_list_fragment__check_out">Check out</string>
+
+    <string name="issues_list__issues_list_fragment__archive_title">@string/_archive</string>
+    <string name="issues_list__issues_list_fragment__priority_issues">Prioritné úlohy</string>
+    <string name="issues_list__issues_list_fragment__other_issues">Ostatné úlohy</string>
+
+    <!-- ISSUE DETAIL -->
+
+    <string name="issue_detail__task_list">Zoznam úloh</string>
+    <string name="issue_detail__change_state_to_clean">Označiť izbu ako upratanú</string>
+    <string name="issue_detail__report_problem">Nahlásiť problém…</string>
+    <string name="issue_detail__take_over">Prevziať</string>
+    <string name="issue_detail__do_not_disturb">Nerušiť</string>
+    <string name="issue_detail__room_succesfuly_marked">Izba bola úspešne označená</string>
+    <string name="issue_detail__plus_x_pcs">+ %s ks</string>
+    <string name="issue_detail__photos">Fotografie</string>
+    <string name="issue_detail__back">Späť</string>
+    <string name="issue_detail__change_room_state">Zmeniť stav izby</string>
+    <string name="issue_detail__state_waiting">Čakajúca (neprevzatá)</string>
+    <string name="issue_detail__state_taken">Prevzatá</string>
+    <string name="issue_detail__state_partially_done">Čiastočne uprataná</string>
+    <string name="issue_detail__state_done">Uprataná</string>
+    <string name="issue_detail__state_done_handyman">Vyriešená</string>
+    <string name="issue_detail__state_do_not_disturb">Izbu nerušiť</string>
+    <string name="issue_detail__network_error">Zmena stavu úlohy bola neúspešná (chyba komunikácie)</string>
+
+    <!-- REPORT PROBLEM -->
+
+    <string name="report_problem__report_problem">Hlásenie problému</string>
+    <string name="report_problem__describe_problem">Popíšte druh problému</string>
+    <string name="report_problem__send">Odoslať</string>
+    <string name="report_problem__notes_hint">V prípade potreby doplňte popis…</string>
+    <string name="report_problem__select">Vyberte…</string>
+    <string name="report_problem__take_a_photo">Fotografie</string>
+    <string name="report_problem__report_next_problem">Nahlásiť ďalší problém</string>
+    <string name="report_problem__back_to_room">Späť na detail izby</string>
+    <string name="report_problem__problem_type">Typ problému</string>
+    <string name="report_problem__successfully_reported">Nahlásenie bolo úspešné</string>
+    <string name="report_problem__try_again">Skús znova</string>
+    <string name="report_problem__add_note">Pridanie poznámy</string>
+    <string name="report_problem__permission_not_granted">Prístup ku kamere nie je možný</string>
+    <string name="report_problem__photos_count">Fotografie (%1$d)</string>
+    <string name="report_problem__unable_to_report_issue">Problém nebol nahlásený (chyba komunikácie)</string>
+    <string name="report_problem__creating_issue">Nahlasujem problém, čakajte prosím.</string>
+    <string name="report_problem__issue_created">Problém bol úspešne nahlásený.</string>
+
+    <!-- COMMON -->
+
+    <string name="_percentage_template">%1$d\%%</string>
+    <string name="_parenthesis_template">(%1$d)</string>
+    <string name="_issues_detail__set_issue_as_resolved">Označiť úlohu ako vyriešenú</string>
+    <string name="_report_problem__error_file_not_created">Chyba: súbor nebol vytvorený</string>
+    <string name="_archive">Archív</string>
+    <string name="_issues__no_issues_found">Nenašli sa žiadne úlohy.</string>
+    <string name="error__no_permission">Vyzerá to tak, že nemáte oprávnenie zobraziť túto možnosť. Pre viac informácií kontaktujte administrátora.</string>
+    <string name="_issues_max_quantity_template">(%s)</string>
+
+</resources>

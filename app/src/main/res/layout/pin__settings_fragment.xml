@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	tools:context=".screens.pin.activity.PinActivity">
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/settingsTitleTV"
+		style="@style/montserrat__26__black"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="16dp"
+		android:text="@string/settings_fragment__settings"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/addressInputET"
+		style="@style/montserrat__18__black"
+		android:layout_width="0dp"
+		android:layout_height="60dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="16dp"
+		android:background="@drawable/shape__rounded_middle_gray"
+		android:digits="0123456789."
+		android:ems="30"
+		android:gravity="center"
+		android:inputType="number|numberDecimal"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/ipTitleTV"
+		tools:text="192.168.1.1" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/portTitleTV"
+		style="@style/montserrat__18__black"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:alpha="0.5"
+		android:text="@string/settings_fragment__port"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressInputET" />
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/portInputET"
+		style="@style/montserrat__18__black"
+		android:layout_width="0dp"
+		android:layout_height="60dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="16dp"
+		android:background="@drawable/shape__rounded_middle_gray"
+		android:ems="10"
+		android:gravity="center"
+		android:inputType="number"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/portTitleTV"
+		tools:text="8000" />
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/applyChangesB"
+		style="@style/blue__button"
+		android:layout_width="0dp"
+		android:layout_height="60dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="24dp"
+		android:layout_marginEnd="16dp"
+		android:text="@string/settings_fragment__apply_changes"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/portInputET" />
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/cancelB"
+		style="@style/light_blue__button"
+		android:layout_width="0dp"
+		android:layout_height="60dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginEnd="16dp"
+		android:layout_marginBottom="16dp"
+		android:elevation="0dp"
+		android:text="@string/settings_fragment__cancel"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/applyChangesB" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/ipTitleTV"
+		style="@style/montserrat__18__black"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="66dp"
+		android:alpha="0.5"
+		android:fontFamily="@font/open_sans"
+		android:text="@string/settings_fragment__ip_address"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textView3"
+		style="@style/montserrat__18__black"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="40dp"
+		android:alpha="0.5"
+		android:text="@string/settings_fragment__connection_type"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/settingsTitleTV" />
+
+	<com.touch4it.myapp.widgets.SwitchView
+		android:id="@+id/selectorSW"
+		android:layout_width="0dp"
+		android:layout_height="42dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="16dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textView3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

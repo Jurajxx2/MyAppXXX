@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape__half_rounded_white">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/countGoodsTitleTV"
+        style="@style/montserrat__bold__26__black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/issues__write_down_state"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/countGoodsSubtitleTV"
+        style="@style/open_sans__14__black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:alpha="0.75"
+        android:text="@string/issues__write_actual_numbers_of_items"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countGoodsTitleTV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/countGoodsListRV"
+        android:background="@color/light_gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countGoodsSubtitleTV"
+        tools:listitem="@layout/issues__write_state_list_item"
+        android:overScrollMode="never"
+        tools:itemCount="5"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/countGoodsConfirmB"
+        style="@style/blue__button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/issues__confirm_count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countGoodsListRV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

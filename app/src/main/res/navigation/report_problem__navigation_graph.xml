@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/report_problem__navigation_graph"
+    app:startDestination="@id/reportProblemFragment">
+
+    <fragment
+        android:id="@+id/reportProblemFragment"
+        android:name="com.touch4it.myapp.screens.reportProblem.fragments.reportProblem.ReportProblemFragment"
+        android:label="ReportProblemFragment"
+        tools:layout="@layout/report_problem__report_problem__fragment">
+        <action
+            android:id="@+id/startIssueTypeSelectionBottomSheetDialogFragment"
+            app:destination="@id/issueTypeSelectionBottomSheetDialogFragment">
+            <argument
+                android:name="options"
+                app:argType="com.touch4it.myapp.data.entities.issueType.IssueTypeLocal[]" />
+            <argument
+                android:name="selectedOption"
+                app:argType="com.touch4it.myapp.data.entities.issueType.IssueTypeLocal"
+                app:nullable="true" />
+        </action>
+        <action
+            android:id="@+id/startSuccessDialogFragment"
+            app:destination="@id/successDialogFragment"
+            tools:layout="@layout/issues__success_dialog_fragment">
+            <argument
+                android:name="isIssueSuccess"
+                app:argType="boolean"
+                android:defaultValue="false" />
+        </action>
+        <action
+            android:id="@+id/startGalleryViewPagerFragment"
+            app:destination="@id/galleryViewPagerFragment">
+            <argument
+                android:name="urlOrUriList"
+                app:argType="string[]" />
+            <argument
+                android:name="position"
+                app:argType="integer" />
+            <argument
+                android:name="isDeletable"
+                app:argType="boolean" />
+        </action>
+    </fragment>
+    <dialog
+        android:id="@+id/issueTypeSelectionBottomSheetDialogFragment"
+        android:name="com.touch4it.myapp.screens.common.issuesTypeSelectionBottomSheetDialog.IssueTypeSelectionBottomSheetDialogFragment"
+        android:label="IssueTypeSelectionBottomSheetDialogFragment"
+        tools:layout="@layout/issues__simple_selection_bottom_sheet_dialog_fragment">
+        <argument
+            android:name="options"
+            app:argType="com.touch4it.myapp.data.entities.issueType.IssueTypeLocal[]" />
+        <argument
+            android:name="selectedOption"
+            app:argType="com.touch4it.myapp.data.entities.issueType.IssueTypeLocal"
+            app:nullable="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/deleteDialogFragment"
+        android:name="com.touch4it.myapp.screens.common.deleteDialog.DeleteDialogFragment"
+        android:label="DeleteDialogFragment"
+        tools:layout="@layout/issues__delete_dialog_fragment" />
+    <dialog
+        android:id="@+id/successDialogFragment"
+        android:name="com.touch4it.myapp.screens.common.successDialog.SuccessDialogFragment"
+        android:label="SuccessDialogFragment" >
+        <argument
+            android:name="isIssueSuccess"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </dialog>
+    <fragment
+        android:id="@+id/galleryViewPagerFragment"
+        android:name="com.touch4it.myapp.screens.common.galleryViewPager.GalleryViewPagerFragment"
+        android:label="GalleryViewPagerFragment"
+        tools:layout="@layout/issues__gallery_view_pager__fragment">
+        <action
+            android:id="@+id/startDeleteDialogFragment"
+            app:destination="@id/deleteDialogFragment" />
+        <argument
+            android:name="urlOrUriList"
+            app:argType="string[]" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+        <argument
+            android:name="isDeletable"
+            app:argType="boolean" />
+    </fragment>
+</navigation>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/issueHolderCV"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginTop="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardForegroundColor="@android:color/transparent"
+    app:cardPreventCornerOverlap="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/indicationStripeIV"
+            android:layout_width="3dip"
+            android:layout_height="0dp"
+            android:background="@color/action_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/issueTypeIV"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/room" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/taskNameTV"
+            style="@style/montserrat_bold__17__black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@+id/taskDescriptionTV"
+            app:layout_constraintEnd_toStartOf="@+id/badgeHolderLL"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@+id/issueTypeIV"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Izba č. 101" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/taskDescriptionTV"
+            style="@style/montserrat__12__black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@+id/issueTypeIV"
+            app:layout_constraintTop_toBottomOf="@+id/taskNameTV"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Príprava na nový príchod" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView3"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:tint="@color/more_dark_gray"
+            app:srcCompat="@drawable/chev_right" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/badgeHolderLL"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape__rounded_light_blue"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/taskNameTV"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/taskNameTV"
+            app:layout_constraintTop_toTopOf="@+id/taskNameTV">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="14dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="8dip"
+                app:srcCompat="@drawable/check_ok" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/badgeTextTV"
+                style="@style/montserrat__bold__10__blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dip"
+                android:layout_marginEnd="8dip"
+                android:text="@string/issues_list__issues_list_fragment__check_out" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+

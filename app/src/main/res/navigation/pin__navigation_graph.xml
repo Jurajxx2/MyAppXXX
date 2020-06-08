@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pin__navigation_graph"
+    app:startDestination="@id/pinFragment">
+
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="com.touch4it.myapp.screens.pin.fragments.pin.PinFragment"
+        android:label="PinFragment"
+        tools:layout="@layout/pin__pin_fragment">
+        <action
+            android:id="@+id/action_pinFragment_to_syncFragment"
+            app:destination="@id/syncFragment"
+            app:popUpTo="@id/pinFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_pinFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/syncFragment"
+        android:name="com.touch4it.myapp.screens.pin.fragments.sync.SyncFragment"
+        android:label="SyncFragment"
+        tools:layout="@layout/pin__sync_fragment" />
+    <dialog
+        android:id="@+id/settingsFragment"
+        android:name="com.touch4it.myapp.screens.pin.fragments.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/pin__settings_fragment" />
+</navigation>

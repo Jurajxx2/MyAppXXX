@@ -1,0 +1,223 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/action_blue</item>
+        <item name="colorPrimaryDark">@color/action_blue_dark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/light_gray</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- TextView -->
+
+    <style name="montserrat" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="montserrat__bold" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="montserrat__26__black" parent="montserrat">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="montserrat__18__black" parent="montserrat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+	<style name="montserrat__bold__26__black">
+		<item name="android:fontFamily">@font/montserrat_bold</item>
+		<item name="android:textSize">26sp</item>
+		<item name="android:textColor">@color/text_black</item>
+	</style>
+
+    <style name="montserrat__17" parent="montserrat">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="montserrat__16__black" parent="montserrat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="montserrat__12__black" parent="montserrat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="montserrat__bold__10__blue" parent="montserrat__bold">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/action_blue</item>
+    </style>
+
+    <style name="montserrat__30__black" parent="montserrat">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="montserrat_bold__30__black" parent="montserrat__bold">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="montserrat__32__black" parent="montserrat">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+	<style name="montserrat_bold__18__black">
+		<item name="android:fontFamily">@font/montserrat_bold</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textColor">@color/text_black</item>
+	</style>
+
+    <style name="montserrat_bold__18" parent="montserrat__bold">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="montserrat_bold__16" parent="montserrat__bold">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+	<style name="montserrat_bold__16__black">
+		<item name="android:fontFamily">@font/montserrat_bold</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textColor">@color/text_black</item>
+	</style>
+
+    <style name="montserrat_bold__15__black" parent="montserrat__bold">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="montserrat_bold__17__black" parent="montserrat__bold">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="open_sans" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="open_sans__bold" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <style name="open_sans__14__black">
+		<item name="android:fontFamily">@font/open_sans</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">@color/text_black</item>
+	</style>
+
+    <style name="open_sans_bold__16__black" parent="open_sans__bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="open_sans_bold__16__all_caps" parent="open_sans__bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="roboto_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="roboto_medium__16__blue" parent="roboto_medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/marking</item>
+    </style>
+
+    <style name="roboto_medium__16__white" parent="roboto_medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="roboto_medium__32__black" parent="roboto_medium">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="roboto_medium_bold" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <style name="roboto_bold__18__black" parent="roboto_medium_bold">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <!-- EditText -->
+
+    <!-- Button -->
+
+    <style name="myapp__button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/shape__rounded_transparent</item>
+    </style>
+
+	<style name="blue__button" parent="myapp__button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/blue_button</item>
+    </style>
+
+    <style name="light_blue__button" parent="myapp__button">
+        <item name="android:textColor">@color/action_blue</item>
+        <item name="backgroundTint">@color/action_blue__10</item>
+    </style>
+
+    <style name="green__button" parent="myapp__button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/positive_green</item>
+    </style>
+
+    <style name="red_normal__button" parent="myapp__button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/red</item>
+    </style>
+
+    <style name="red_report__button" parent="myapp__button">
+        <item name="android:textColor">@color/red_button_text</item>
+        <item name="backgroundTint">@color/red_button</item>
+    </style>
+
+
+    <style name="white__button" parent="myapp__button">
+		<item name="android:textColor">@color/action_blue</item>
+		<item name="backgroundTint">@color/white</item>
+    </style>
+
+    <!-- Radio button -->
+
+    <style name="myapp__radio_button" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+        <item name="android:textColor">@color/switch_button</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="left__switch_button" parent="myapp__radio_button">
+        <item name="android:background">@drawable/switch_left_button__selector</item>
+    </style>
+
+    <style name="right__switch_button" parent="myapp__radio_button">
+        <item name="android:background">@drawable/switch_right_button__selector</item>
+    </style>
+
+    <!-- BottomSheet -->
+
+	<style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+		<item name="android:background">@drawable/shape__half_rounded_white</item>
+	</style>
+
+	<style name="BottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+		<item name="android:windowIsFloating">false</item>
+		<item name="bottomSheetStyle">@style/BottomSheet</item>
+		<item name="android:statusBarColor">@android:color/transparent</item>
+		<item name="android:navigationBarColor">@color/text_black</item>
+	</style>
+
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+	<com.touch4it.myapp.widgets.graph.GraphView
+		android:id="@+id/todayProgressGV"
+		android:layout_width="96dp"
+		android:layout_height="96dp"
+        android:layout_marginTop="96dp"
+		app:layout_constraintBottom_toTopOf="@+id/textView4"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textView4"
+		style="@style/montserrat_bold__30__black"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/issues_list__issues_list_fragment__today_agenda"
+		app:layout_constraintBottom_toTopOf="@+id/todayProgressBaseInfoTV"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/todayProgressGV" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/todayProgressBaseInfoTV"
+		style="@style/montserrat__16__black"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="16dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textView4"
+		tools:text="Jana Novotná, 27. marec 2019" />
+
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/logoutIV"
+		android:layout_width="21dp"
+		android:layout_height="22dp"
+		android:layout_marginTop="16dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/ic_logout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
